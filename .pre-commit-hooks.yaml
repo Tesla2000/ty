@@ -1,0 +1,7 @@
+- id: ty
+  name: ty
+  description: ty
+  entry: python
+  language: python
+  types: [python]
+  files: ''

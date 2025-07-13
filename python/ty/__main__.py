@@ -75,7 +75,7 @@ def find_ty_bin() -> str:
     raise FileNotFoundError(scripts_path)
 
 
-if __name__ == "__main__":
+def main():
     ty = os.fsdecode(find_ty_bin())
     if sys.platform == "win32":
         import subprocess
@@ -84,3 +84,7 @@ if __name__ == "__main__":
         sys.exit(completed_process.returncode)
     else:
         os.execvp(ty, [ty, *sys.argv[1:]])
+
+
+if __name__ == "__main__":
+    main()
